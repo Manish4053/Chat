@@ -35,6 +35,9 @@ if(process.env.NODE_ENV === "production"){
 
 }
 
+app.use("/",(req,res)=>{
+res.send("API is running....");  
+})
 server.listen(PORT, () => {
   console.log("server is rinning on PORT: " + PORT);
   connectDB();
